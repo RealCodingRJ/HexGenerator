@@ -3,6 +3,27 @@
 #include <stdio.h>
 #include <print>
 
+struct Option {
+
+	int r = 0;
+	int g = 0;
+	int b = 0;
+	std::string hex;
+};
+
+class HexOption : public Option {
+
+public:
+
+	void HexParse(Option r, Option g, Option b) {	
+
+		std::cout << "R: " << r.r << std::endl;
+		std::cout << "G: " << g.g << std::endl;
+		std::cout << "B: " << b.b << std::endl;
+
+	}
+};
+
 class Code 
 {
 	
@@ -25,7 +46,7 @@ public:
 
 	int Hex() 
 	{
-		
+
 		for (int i = 0; i < 6; i++)
 		{
 			
@@ -60,11 +81,18 @@ static void printedHexRand()
 
 int main()
 {
+	HexOption options;
+	HexCode hex;
+
+	Option r;
+	Option g;
+	Option b;
+
 	std::println("Enter Type: ");
 
 	std::string option;
-	std::cin >> option;
 
+	std::cin >> option;
 
 
 	if (option == "rand") 
@@ -75,9 +103,16 @@ int main()
 
 	if (option == "hex") 
 	{
-		
-		HexCode m;
-		m.Hex();
+
+		std::cin >> r.r;
+		std::cin >> g.g;
+		std::cin >> b.b;
+
+		options.HexParse(r, g, b);
+
+		hex.hexConverted(r.r);
+		hex.hexConverted(g.g);
+		hex.hexConverted(b.b);
 
 	}
 
