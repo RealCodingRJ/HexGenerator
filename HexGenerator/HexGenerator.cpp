@@ -11,7 +11,17 @@ struct Option {
 	std::string hex;
 };
 
-class HexOption : public Option {
+
+class HexOption : public Option  {
+
+public:
+
+	void getTitle(std::string title) {
+
+		std::cout << "Welcome to: " << title << std::endl;
+
+	}
+
 
 public:
 
@@ -81,12 +91,17 @@ static void printedHexRand()
 
 int main()
 {
+	
+
 	HexOption options;
 	HexCode hex;
-
+	
 	Option r;
 	Option g;
 	Option b;
+
+	options.getTitle("| Hex Consersion App | ");
+	std::cout << "\n";
 
 	std::println("Enter Type: ");
 
