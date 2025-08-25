@@ -13,10 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Options">
+      <UniqueIdentifier>{8557a977-9626-4a23-bc44-bb0079a3fc7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code Init">
+      <UniqueIdentifier>{a8e447ce-4123-4ef5-87c3-8e0c915c63f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HexGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Options.h">
+      <Filter>Header Files\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes.h">
+      <Filter>Header Files\Code Init</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
